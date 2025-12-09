@@ -1,6 +1,6 @@
 # Persistent Personalization Preferences
 
-Keeps your personalization preferences persistant, just in case Windows (or anything else) tries to change them on you.
+Keeps your personalization preferences persistent, just in case Windows (or anything else) tries to change them on you.
 
 ## Overview
 
