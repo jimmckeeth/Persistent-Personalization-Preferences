@@ -19,6 +19,7 @@ object PerPerPrefMain: TPerPerPrefMain
   Font.Height = -18
   Font.Name = 'Segoe UI'
   Font.Style = []
+  FormStyle = fsStayOnTop
   Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate

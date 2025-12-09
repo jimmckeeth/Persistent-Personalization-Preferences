@@ -1,4 +1,4 @@
-﻿unit PerPerPref_Main;
+unit PerPerPref_Main;
 
 interface
 
@@ -41,9 +41,11 @@ type
   private
     { Private declarations }
     FPM: TPersonalizationManager;
+    procedure HandleThemeChange;
   public
     { Public declarations }
     procedure WMSize(var Msg: TWMSize); message WM_SIZE;
+    procedure WMSettingChange(var Message: TWMSettingChange); message WM_SETTINGCHANGE;
   end;
 
 var
@@ -131,10 +133,8 @@ var
   reg: TRegistry;
 begin
   FPM := TPersonalizationManager.Create(self);
-  if FPM.AppTheme = TThemeMode.Dark then
-    TStyleManager.SetStyle('Glossy')
-  else
-    TStyleManager.SetStyle('Windows10');
+
+  HandleThemeChange;
 
   reg := TRegistry.Create;
   try
@@ -192,6 +192,14 @@ begin
   end;
 end;
 
+procedure TPerPerPrefMain.HandleThemeChange;
+begin
+  if FPM.AppTheme = TThemeMode.Dark then
+    TStyleManager.SetStyle('Glossy')
+  else
+    TStyleManager.SetStyle('Windows10');
+end;
+
 procedure TPerPerPrefMain.LockDark1Click(Sender: TObject);
 begin
   grpLockTheme.ItemIndex := 2;
@@ -220,6 +228,12 @@ procedure TPerPerPrefMain.Unlock1Click(Sender: TObject);
 begin
   grpLockTheme.ItemIndex := 0;
   grpLockThemeClick(Sender);
+end;
+
+procedure TPerPerPrefMain.WMSettingChange(var Message: TWMSettingChange);
+begin
+  if SameText('ImmersiveColorSet', String(Message.Section)) then
+    HandleThemeChange;
 end;
 
 procedure TPerPerPrefMain.WMSize(var Msg: TWMSize);
