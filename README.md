@@ -24,7 +24,7 @@ You can even change your settings right from the system tray.
 
 ## Installation
 
-There isn't an install, yet. Just [put the EXE](https://github.com/jimmckeeth/Persistent-Personalization-Preferences/releases/) where you want it and run it. When you select Auto Start it will remember it's location and run everytime you log into Windows. 
+There isn't an install, yet. Just [put the EXE](https://github.com/jimmckeeth/Persistent-Personalization-Preferences/releases/) where you want it and run it. When you select **Auto Start** it will remember it's location and run everytime you log into Windows. 
 
 ## Built with Delphi 13 Florence
 
