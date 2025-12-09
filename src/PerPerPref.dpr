@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0ef9afda8bbd24d19a668d9d176ad29e222bc2a4f9d1992f4b332edf65cbab34
-size 425
+﻿program PerPerPref;
+
+uses
+  Vcl.Forms,
+  PerPerPref_Main in 'PerPerPref_Main.pas' {PerPerPrefMain},
+  Windows.Personalization in 'Windows.Personalization.pas',
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.Title := 'Persistent Personalization Preferences';
+  Application.CreateForm(TPerPerPrefMain, PerPerPrefMain);
+  Application.Run;
+end.
