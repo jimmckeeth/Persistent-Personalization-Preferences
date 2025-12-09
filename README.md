@@ -18,6 +18,8 @@ And lock it in
 
 Select **Auto Start** and **Keep in Tray** and it will take care of things for you. Whenever Windows forgets and tries to blind you, it switches back immediately, sometimes even before you notice. 
 
+https://github.com/user-attachments/assets/95d229fd-4cff-4ba9-a996-4511c97235ed
+
 You can even change your settings right from the system tray.
 
 ![Tray menu](https://github.com/jimmckeeth/Persistent-Personalization-Preferences/blob/main/images/PerPerPref-Dark-Tray.png?raw=true)
